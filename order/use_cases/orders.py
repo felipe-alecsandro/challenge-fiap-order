@@ -6,15 +6,11 @@ from order.serializers.orders import *
 class ListOrdersUseCase:
     def execute(self, request):
         status = request.query_params.get('status', None)
-        user = request.user
 
         # Query the Order model directly
         queryset = Order.objects.all()
-
-        if user.is_authenticated:
-            if not user.is_staff:
-                queryset = queryset.filter(user=user)
-        else:
+        print(f'listagem dentro de usecase{queryset}')
+        if request.query_params.get('session'):
             queryset = queryset.filter(session_token=request.query_params.get('session'))
 
         if status:

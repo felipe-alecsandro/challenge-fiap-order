@@ -5,4 +5,5 @@ class BurgerstoreConfig(AppConfig):
     name = 'burgerstore'
 
     def ready(self):
-        import burgerstore.management.commands
+        # Your initialization code here
+        pass

@@ -1,1 +1,1 @@
-CREATE DATABASE challengedb WITH OWNER = fiap;
+CREATE DATABASE orderdb WITH OWNER = fiap;
