@@ -31,14 +31,14 @@ spec:
           ports:
             - containerPort: 3020
         - name: challenge-container
-          image: deboraferrarids2/challenge_web:v2.0
+          image: 891377406064.dkr.ecr.us-east-1.amazonaws.com/challenge-ecr:latest
           env:
-            - name: AWS_ACCESS_KEY_ID
+            - name: AKIA47CR32BYIKGP7N36
               valueFrom:
                 secretKeyRef:
                   name: aws-credentials
                   key: access-key
-            - name: AWS_SECRET_ACCESS_KEY
+            - name: hn1YOdQr1LtiazjmsdJ6P7+YtBeeXTXdXi3i663y
               valueFrom:
                 secretKeyRef:
                   name: aws-credentials
