@@ -28,5 +28,5 @@ jobs:
     - name: Build and push Docker image to ECR
       id: build-image
       run: |
-        docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/challenge-ecr:latest .
-        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/challenge-ecr:latest
+        docker build -t 891377406064.dkr.ecr.us-east-1.amazonaws.com/challenge-ecr:latest .
+        docker push 891377406064.dkr.ecr.us-east-1.amazonaws.com/challenge-ecr:latest
