@@ -4,7 +4,7 @@ metadata:
   name: challenge-dep
 
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: fiap-challenge
@@ -15,7 +15,7 @@ spec:
         app: fiap-challenge
     spec:
       containers:
-        - name: postgres-container
+        - name: fiap-challenge-order-postgres
           image: postgres
           env:
             - name: POSTGRES_DB
@@ -32,7 +32,7 @@ spec:
                   key: password
           ports:
             - containerPort: 5432
-        - name: challenge-container
+        - name: fiap-challenge-order-api
           image: DOCKER_IMAGE
           imagePullPolicy: Always
           ports:
