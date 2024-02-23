@@ -7,7 +7,7 @@ on:
 
 env:
   ECR_REPOSITORY: fiap-architecture
-  EKS_CLUSTER_NAME: fiap-challenge
+  EKS_CLUSTER_NAME: fiap-challenge-eks
   AWS_REGION: us-east-1
 
 jobs:
