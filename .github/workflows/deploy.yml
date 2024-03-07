@@ -1,15 +1,11 @@
 name: Deploy to ECR
 
 on:
-  # push:
-  #   branches:
-  #     - main
-  # pull_request:
-  #   types: [closed] -> correct
-  #   types: [opened, synchronize, reopened] -> this is a default from sonarcloud
-  workflow_dispatch:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
 
 env:
   ECR_REPOSITORY: fiap-architecture
@@ -20,7 +16,7 @@ jobs:
 
   sonarcloud:
     name: SonarCloud
-    # if: ${{ github.event.pull_request.merged == true }}
+    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
