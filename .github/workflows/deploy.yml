@@ -1,11 +1,9 @@
 name: Pipeline CI/CD
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types: [closed]
+    branches: [main]
 
 env:
   ECR_REPOSITORY: fiap-architecture
