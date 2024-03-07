@@ -8,8 +8,8 @@ on:
   #   types: [closed] -> correct
   #   types: [opened, synchronize, reopened] -> this is a default from sonarcloud
   workflow_dispatch:
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
 
 env:
   ECR_REPOSITORY: fiap-architecture
